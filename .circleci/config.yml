@@ -3,8 +3,8 @@ jobs:
     deploy:
         docker:
             - image: attensee/s3_website
-            steps:
-                - run:
-                    name: Deploy to S3
-                    command: s3_website push
+        steps:
+            - run:
+                name: Deploy to S3
+                command: s3_website push
 
