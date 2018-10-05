@@ -6,6 +6,9 @@ jobs:
         working_directory: ~/arvind.xyz/
         steps:
             - run:
+                name: Test working directory
+                command: pwd
+            - run:
                 name: Deploy to S3
                 command: s3_website push
 workflows:
