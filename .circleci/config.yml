@@ -4,9 +4,7 @@ jobs:
         docker:
             - image: attensee/s3_website
         steps:
-            - run:
-                name: Checkout latest source code from Bitbucket
-                command: checkout
+            - checkout
             - run:
                 name: Deploy to S3
                 command: s3_website push
