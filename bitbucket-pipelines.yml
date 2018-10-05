@@ -3,5 +3,8 @@ image: attensee/s3_website
 pipelines:
   default:
     - step:
+        name: Deploy to S3
+        deployment: production
+        image: atlassian/pipelines-awscli
         script:
-          - s3_website push
+          - aws s3 sync --delete . s3://arvind.xyz
