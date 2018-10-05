@@ -3,11 +3,10 @@ jobs:
     deploy:
         docker:
             - image: attensee/s3_website
-        working_directory: ~/ashdjanrvind.xyz/
         steps:
             - run:
-                name: Test working directory
-                command: ls
+                name: Checkout latest source code from Bitbucket
+                command: checkout
             - run:
                 name: Deploy to S3
                 command: s3_website push
