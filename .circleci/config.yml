@@ -3,11 +3,20 @@ jobs:
     deploy:
         docker:
             - image: attensee/s3_website
-        working_directory: ~/arvind.xyz/
+              #working_directory: ~/arvind.xyz/
         steps:
             - run:
                 name: Test working directory
                 command: pwd
+            - run:
+                name: Listing Directory
+                command: ls
+            - run:
+                name: go up a dir
+                command: cd ..
+            - run:
+                name: ls again
+                command: ls
             - run:
                 name: Deploy to S3
                 command: s3_website push
