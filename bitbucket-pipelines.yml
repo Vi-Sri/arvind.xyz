@@ -5,6 +5,5 @@ pipelines:
     - step:
         name: Deploy to S3
         deployment: production
-        image: atlassian/pipelines-awscli
         script:
-          - aws s3 sync --delete . s3://arvind.xyz
+          - s3_website push
