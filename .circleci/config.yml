@@ -3,6 +3,7 @@ jobs:
     deploy:
         docker:
             - image: attensee/s3_website
+        working_directory: ~/arvind.xyz/
         steps:
             - run:
                 name: Deploy to S3
