@@ -3,7 +3,7 @@ jobs:
     deploy:
         docker:
             - image: attensee/s3_website
-        working_directory: ~/arvind.xyz/
+        working_directory: ~/ashdjanrvind.xyz/
         steps:
             - run:
                 name: Test working directory
